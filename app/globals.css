@@ -12,16 +12,21 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-.animate-block-hidden {
+.animate-block-hidden-small {
     position: absolute;
 
+    animation: slide-in 2s forwards;
+    animation-delay: 1.5s;
+}
+.animate-block-hidden {
+    position: absolute;
     animation: slide-in 2s forwards;
 }
 
 @keyframes slide-in {
     0% {
-        transform: translateX(-100%);
         background-color: #ffffff;
+        transform: translateX(-100%);
     }
     100% {
         transform: translateX(200%);

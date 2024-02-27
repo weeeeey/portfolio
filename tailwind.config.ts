@@ -76,7 +76,8 @@ const config = {
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
-                'block-reveal-text': 'block-reveal-text 1.5s ease-out',
+                'block-reveal-text': 'block-reveal-text 3s ease-out',
+                'block-reveal-text-main': 'block-reveal-text 1s ease-out',
             },
         },
     },
