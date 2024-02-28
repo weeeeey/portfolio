@@ -1,8 +1,31 @@
+'use cilent';
+import { useModalStore } from '@/lib/modal-store';
 import React, { forwardRef } from 'react';
 
 export const WorkBody = forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
+    const { onOpen } = useModalStore();
+
+    const handleClick = (n: number) => {
+        onOpen(n);
+    };
+
     return (
-        <div ref={ref} className="snap-start h-full bg-violet-700 pl-72"></div>
+        <div
+            ref={ref}
+            style={{ backgroundColor: 'rgb(26, 21, 39)' }}
+            className="snap-start h-full  pl-72 py-10"
+        >
+            <div className="text-white">Work</div>
+            <button className="bg-white px-10" onClick={() => handleClick(0)}>
+                0
+            </button>
+            <button className="bg-white px-10" onClick={() => handleClick(1)}>
+                1
+            </button>
+            <button className="bg-white px-10" onClick={() => handleClick(2)}>
+                2
+            </button>
+        </div>
     );
 });
 

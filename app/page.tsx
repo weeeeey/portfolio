@@ -6,6 +6,7 @@ import { WorkBody } from '@/components/work-body';
 import { AboutBody } from '@/components/about-body';
 import { ContactBody } from '@/components/contact-body';
 import { useParams } from 'next/navigation';
+import { TopButton } from '@/components/top-button';
 
 const MainPage = () => {
     const startRef = useRef<HTMLDivElement>(null);
@@ -42,10 +43,7 @@ const MainPage = () => {
             <WorkBody ref={workRef} />
             <AboutBody ref={aboutRef} />
             <ContactBody ref={contacttRef} />
-            <div
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="w-10 h-10 rounded-full bg-white fixed bottom-10 right-10 cursor-pointer"
-            />
+            <TopButton />
         </motion.div>
     );
 };
