@@ -25,6 +25,12 @@ export const WorkBody = forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
             <button className="bg-white px-10" onClick={() => handleClick(2)}>
                 2
             </button>
+            <button className="bg-white px-10" onClick={() => handleClick(3)}>
+                3
+            </button>
+            <button className="bg-white px-10" onClick={() => handleClick(4)}>
+                4
+            </button>
         </div>
     );
 });

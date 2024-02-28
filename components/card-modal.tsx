@@ -3,9 +3,8 @@ import { useModalStore } from '@/lib/modal-store';
 import { Dialog, DialogContent, DialogFooter, DialogHeader } from './ui/dialog';
 import { useEffect, useState } from 'react';
 import { CardType, cards } from '@/utils/data';
-import Image from 'next/image';
-import { Home } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { Github, Home } from 'lucide-react';
+import { MyVideo } from './my-Video';
 
 export const CardModal = () => {
     const { isOpen, onClose, initialValue } = useModalStore();
@@ -20,16 +19,20 @@ export const CardModal = () => {
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent
                 style={{ backgroundColor: 'rgb(26, 21, 39)' }}
-                className="max-w-4xl  border-none"
+                className="max-w-5xl  border-none"
             >
                 <div className="grid grid-cols-2">
-                    <iframe
-                        src={card.videoUrl}
-                        allowFullScreen
-                        width="300"
-                        height="300"
-                    />
-                    <div className="space-y-4">
+                    <div className="flex justify-center items-center">
+                        <iframe
+                            src={card.videoUrl}
+                            allowFullScreen
+                            width="450"
+                            height="400"
+                        />
+                        {/* <MyVideo src={card.videoUrl!} /> */}
+                        {/* < */}
+                    </div>
+                    <div className="flex flex-col space-y-4">
                         <div className="text-white text-3xl">{card.title}</div>
                         <p className="text-slate-400">{card.description}</p>
                         <div className="grid grid-cols-3">
@@ -52,32 +55,24 @@ export const CardModal = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="flex justify-start items-center space-x-2">
+                            <a
+                                href={card.gitUrl}
+                                target="_blank"
+                                className=" bg-violet-800 hover:bg-violet-900 rounded-lg px-4 py-1"
+                            >
+                                <Github className="w-6 h-6 text-black/50" />
+                            </a>
+                            <a
+                                href={card.siteUrl}
+                                target="_blank"
+                                className=" bg-violet-800 hover:bg-violet-900  rounded-lg px-4 py-1"
+                            >
+                                <Home className="w-6 h-6  text-black/50" />
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <DialogFooter>
-                    <div className="flex justify-start items-center space-x-2">
-                        <a
-                            href={card.gitUrl}
-                            target="_blank"
-                            className=" bg-violet-900 hover:bg-violet-700 rounded-lg px-4 py-1"
-                        >
-                            <Image
-                                alt="git"
-                                src="/git.png"
-                                width={30}
-                                height={30}
-                                className="rounded-full bg-violet-500 "
-                            />
-                        </a>
-                        <a
-                            href={card.siteUrl}
-                            target="_blank"
-                            className=" bg-violet-900 hover:bg-violet-700 text-black/80 rounded-lg px-4 py-1"
-                        >
-                            <Home className="w-7 h-7 bg-violet-600 rounded-full p-1" />
-                        </a>
-                    </div>
-                </DialogFooter>
             </DialogContent>
         </Dialog>
     );
