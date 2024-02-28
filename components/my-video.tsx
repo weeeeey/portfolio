@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import { ClipLoader } from 'react-spinners';
 
 export const Video = ({ src }: { src: string }) => {
     return (
@@ -18,7 +19,11 @@ export const Video = ({ src }: { src: string }) => {
 };
 
 export const Loading = () => {
-    return <div>Loading...</div>;
+    return (
+        <div className="w-full h-full">
+            <ClipLoader size={200} />
+        </div>
+    );
 };
 
 export const MyVideo = ({ src }: { src: string }) => {
