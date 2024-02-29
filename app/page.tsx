@@ -41,6 +41,7 @@ const MainPage = () => {
         >
             <StartBody ref={startRef} />
             <WorkBody ref={workRef} />
+            <WorkBody />
             <AboutBody ref={aboutRef} />
             <ContactBody ref={contacttRef} />
             <TopButton />
