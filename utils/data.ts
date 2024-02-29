@@ -29,10 +29,10 @@ export const cards: CardType[] = [
             '실시간 마우스 커서 및 작업물 공유',
             '실시간 협업 기능',
         ],
-        image: '',
+        image: '/thumb/cost.png',
         gitUrl: 'https://github.com/weeeeey/Cost-it',
         siteUrl: 'https://cost-it.vercel.app/',
-        videoUrl: 'https://www.youtube.com/embed/AYzsVDjYuek',
+        videoUrl: 'costIt',
     },
     {
         title: 'WC: we Climber',
@@ -54,9 +54,10 @@ export const cards: CardType[] = [
             '좋아요 및 댓글 기능',
             '게시판 생성/수정/삭제/검색 기능',
         ],
-        image: '/images/portfolio.png',
+        image: '/thumb/climb.png',
         gitUrl: 'https://github.com/weeeeey/climb',
         siteUrl: 'https://climb-tawny.vercel.app/',
+        videoUrl: 'climb',
     },
     {
         title: 'Wmall',
@@ -72,7 +73,7 @@ export const cards: CardType[] = [
         ],
         gitUrl: 'https://github.com/weeeeey/wmall---admin',
         siteUrl: 'https://wmall-admin.vercel.app/',
-        image: '',
+        image: '/thumb/wmall.png',
         skills: [
             'Next.js',
             'TypeScript',
@@ -84,7 +85,7 @@ export const cards: CardType[] = [
             'Cloudinary',
             'Toss Payment',
         ],
-        videoUrl: 'https://www.youtube.com/embed/-Snlr2dZY4g',
+        videoUrl: 'wmall',
     },
     {
         title: 'Skywnw',
@@ -100,7 +101,7 @@ export const cards: CardType[] = [
         ],
         gitUrl: 'https://github.com/weeeeey/skywnw',
         siteUrl: 'https://skywnw.vercel.app/',
-        image: '',
+        image: '/thumb/skywnw.png',
         skills: [
             'Next.js',
             'Tailwind CSS',
@@ -112,7 +113,7 @@ export const cards: CardType[] = [
             'React-Hook-Form',
             'World-Countries',
         ],
-        videoUrl: 'https://www.youtube.com/embed/v178qSOL8zM',
+        videoUrl: 'skywnw',
     },
     {
         title: 'Wiscord',
@@ -126,7 +127,7 @@ export const cards: CardType[] = [
             '무한 스크롤을 통한 메시지 로딩',
         ],
         gitUrl: 'https://github.com/weeeeey/discord',
-        image: '',
+        image: '/thumb/wiscord.png',
         siteUrl: '',
         skills: [
             'Next.js',
@@ -138,6 +139,6 @@ export const cards: CardType[] = [
             'Socket.io',
             'Livekit',
         ],
-        videoUrl: 'https://www.youtube.com/embed/1HJu1lRHPGk',
+        videoUrl: 'wiscord',
     },
 ];

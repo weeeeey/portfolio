@@ -4,15 +4,16 @@ import { ClipLoader } from 'react-spinners';
 export const Video = ({ src }: { src: string }) => {
     return (
         <video
-            width="320"
-            height="240"
+            width="100%"
+            height="100%"
             controls
             preload="none"
             autoPlay
             muted
             playsInline
+            className="border-none"
         >
-            <source src={`@/public/video/${src}.mp4`} type="video/mp4" />
+            <source src={`/video/${src}.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
         </video>
     );
@@ -28,8 +29,10 @@ export const Loading = () => {
 
 export const MyVideo = ({ src }: { src: string }) => {
     return (
-        <Suspense fallback={<Loading />}>
-            <Video src={src} />
-        </Suspense>
+        <div className="pr-5 border-none">
+            <Suspense fallback={<Loading />}>
+                <Video src={src} />
+            </Suspense>
+        </div>
     );
 };

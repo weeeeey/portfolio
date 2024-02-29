@@ -23,6 +23,30 @@ html {
     animation: slide-in 2s forwards;
 }
 
+.animate-drop-down {
+    animation: drow-down 1s forwards;
+}
+.animate-drop-in {
+    animation: drow-in 1s forwards;
+}
+
+@keyframes drow-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes drop-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
 @keyframes slide-in {
     0% {
         background-color: #ffffff;
@@ -30,6 +54,21 @@ html {
     }
     100% {
         transform: translateX(200%);
+    }
+}
+
+.animate-card-reveal {
+    animation: slide-in-card 2s forwards;
+}
+
+@keyframes slide-in-card {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
     }
 }
 

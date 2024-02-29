@@ -20,7 +20,7 @@ export const NavbarBody = () => {
     return (
         <div
             className={cn(
-                'absolute text-white top-0 w-full px-10 bg-transparent py-3  flex justify-between items-center'
+                'fixed text-white top-0 w-full px-10 bg-transparent py-3  flex justify-between items-center'
             )}
         >
             <Link

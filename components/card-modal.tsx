@@ -1,10 +1,10 @@
 'use client';
 import { useModalStore } from '@/lib/modal-store';
-import { Dialog, DialogContent, DialogFooter, DialogHeader } from './ui/dialog';
+import { Dialog, DialogContent } from './ui/dialog';
 import { useEffect, useState } from 'react';
 import { CardType, cards } from '@/utils/data';
 import { Github, Home } from 'lucide-react';
-import { MyVideo } from './my-Video';
+import { MyVideo } from './my-video';
 
 export const CardModal = () => {
     const { isOpen, onClose, initialValue } = useModalStore();
@@ -23,14 +23,7 @@ export const CardModal = () => {
             >
                 <div className="grid grid-cols-2">
                     <div className="flex justify-center items-center">
-                        <iframe
-                            src={card.videoUrl}
-                            allowFullScreen
-                            width="450"
-                            height="400"
-                        />
-                        {/* <MyVideo src={card.videoUrl!} /> */}
-                        {/* < */}
+                        <MyVideo src={card.videoUrl!} />
                     </div>
                     <div className="flex flex-col space-y-4">
                         <div className="text-white text-3xl">{card.title}</div>
@@ -59,16 +52,16 @@ export const CardModal = () => {
                             <a
                                 href={card.gitUrl}
                                 target="_blank"
-                                className=" bg-violet-800 hover:bg-violet-900 rounded-lg px-4 py-1"
+                                className="transition-all text-white/40 hover:text-white/70 bg-violet-800 hover:bg-violet-900 rounded-lg px-4 py-1"
                             >
-                                <Github className="w-6 h-6 text-black/50" />
+                                <Github className="w-6 h-6 " />
                             </a>
                             <a
                                 href={card.siteUrl}
                                 target="_blank"
-                                className=" bg-violet-800 hover:bg-violet-900  rounded-lg px-4 py-1"
+                                className="transition-all text-white/40 hover:text-white/70 bg-violet-800 hover:bg-violet-900 rounded-lg px-4 py-1"
                             >
-                                <Home className="w-6 h-6  text-black/50" />
+                                <Home className="w-6 h-6 " />
                             </a>
                         </div>
                     </div>

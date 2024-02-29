@@ -72,12 +72,18 @@ const config = {
                     '50%': { opacity: '0' },
                     '100%': { opacity: '100%' },
                 },
+                'block-reveal-card': {
+                    '0%': { translateX: '-100%' },
+                    '50%': { translateX: '-50%' },
+                    '100%': { translateX: '0%' },
+                },
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
                 'block-reveal-text': 'block-reveal-text 3s ease-out',
                 'block-reveal-text-main': 'block-reveal-text 1s ease-out',
+                'block-reveal-card': 'block-reveal-card 2s ease-out',
             },
         },
     },
