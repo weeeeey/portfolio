@@ -7,6 +7,7 @@ import { AboutBody } from '@/components/about-body';
 import { ContactBody } from '@/components/contact-body';
 import { useParams, useRouter } from 'next/navigation';
 import { TopButton } from '@/components/top-button';
+import { Line } from '@/components/line';
 
 const MainPage = () => {
     const startRef = useRef<HTMLDivElement>(null);
@@ -44,8 +45,9 @@ const MainPage = () => {
     return (
         <motion.div
             style={{ backgroundColor: 'rgb(26, 21, 39)' }}
-            className=" h-full w-full  "
+            className=" h-full w-full snap-y snap-mandatory  "
         >
+            <Line />
             <StartBody ref={startRef} />
             <WorkBody ref={workRef} works={[0, 1]} head />
             <WorkBody works={[2, 3]} />
