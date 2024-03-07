@@ -10,6 +10,7 @@ body,
 
 html {
     scroll-snap-type: y mandatory;
+    background-color: rgb(26, 21, 39);
 }
 
 .animate-block-hidden-small {
