@@ -23,12 +23,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`relative ${font.className}`}>
+            <body className={`${font.className} overflow-y-scroll`}>
                 <CardModal />
                 <NavbarBody />
-                <Line />
+                {/* <Line /> */}
                 <Toaster />
-                <main className="h-full w-full">{children}</main>
+                <main className="h-full w-full ">{children}</main>
             </body>
         </html>
     );

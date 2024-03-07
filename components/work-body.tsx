@@ -1,6 +1,7 @@
 'use cilent';
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import { WorkCard } from './work-card';
+import { useInView } from 'framer-motion';
 
 interface WorkBodyProps {
     works: number[];
@@ -9,6 +10,12 @@ interface WorkBodyProps {
 
 export const WorkBody = forwardRef(
     ({ works, head }: WorkBodyProps, ref: React.Ref<HTMLDivElement>) => {
+        const cRef = useRef<HTMLDivElement>(null);
+        const inview = useInView(cRef, {
+            amount: 0.5,
+            once: true,
+        });
+
         return (
             <div
                 ref={ref}
@@ -17,9 +24,11 @@ export const WorkBody = forwardRef(
             >
                 {head && <div className="text-slate-400 ">Work/{`>`}</div>}
 
-                {works.map((work, idx) => (
-                    <WorkCard key={idx} idx={work} />
-                ))}
+                <div ref={cRef} className="overflow-x-hidden pl-10">
+                    {works.map((work, idx) => (
+                        <WorkCard key={idx} idx={work} inview={inview} />
+                    ))}
+                </div>
             </div>
         );
     }
