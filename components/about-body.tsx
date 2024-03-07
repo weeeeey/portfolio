@@ -99,9 +99,7 @@ export const AboutBody = forwardRef((props, ref: React.Ref<HTMLDivElement>) => {
                         {`' Webpack/vite'`},{`'React Query'`} , {`' Zustand'`} ,{' '}
                         {`' npm/pnpm/yarn'`} , {`' CSR/SSR'`} , {`' SPA/MPA'`} ,{' '}
                         {`' AWS'`}
-                        {`'Git'`} , {`' Notion'`} , {`' Slack'`} ,{' '}
-                        {`' HTML/CSS'`},{`'CI/CD'`} , {`' Python'`} ,{' '}
-                        {`' C/C++'`}
+                        {`'Git'`} , {`' Notion'`} , {`' Slack'`}
                     </div>
                     <div className="indent-20 text-white hover:bg-slate-800">{`]`}</div>
                     <div className="text-white hover:bg-slate-800">{`}`}</div>
